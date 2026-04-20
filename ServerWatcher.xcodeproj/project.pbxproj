@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01127DFE6FAA71512868AE45 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE152B0E7CFA87E8BCA9213 /* WidgetKit.framework */; };
+		22D044017ECA3738B0BDD18A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B082BB9593689A9AAA1398D /* ContentView.swift */; };
+		318EAF2A296B9E4077728605 /* ServerWatcherWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B96D2F105B03115E82E92 /* ServerWatcherWidget.swift */; };
+		38A8CA081DD7EB54CF0570E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D037989F9DC8196BC3E722 /* Assets.xcassets */; };
+		3FA7D41356BBCE2A33DAB54E /* ServerWatcherWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83ACE95CB1B428B58FC8921 /* ServerWatcherWidgetBundle.swift */; };
+		549ED7A718068583404E52B1 /* ServerWatcherWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1C6FA87EA38B4DCFFD317E4B /* ServerWatcherWidgetExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5FF39D6E764EF6F89323D2FA /* SharedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B52244CFB3F8676106A886 /* SharedDataManager.swift */; };
+		6DD5FB3ADC3CA7897AEE280B /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C1A21609C113803436FDB /* NetworkChecker.swift */; };
+		80A0D09D28A996C5818FC152 /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE070C3DCF7B4717D8E3EC /* ServerViewModel.swift */; };
+		918FE822768CE576EF4AF449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC28BAF388A79064FC2801F2 /* Assets.xcassets */; };
+		99011E274C66771C2EA1B45E /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C1A21609C113803436FDB /* NetworkChecker.swift */; };
+		9925E2A59D705CB03354530D /* ServerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE846F29617DA62535DCC39A /* ServerEntry.swift */; };
+		9AB436DE8F9A9FABF32973F4 /* ServerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE846F29617DA62535DCC39A /* ServerEntry.swift */; };
+		B4965C070CF7E350A3DB54F2 /* SharedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B52244CFB3F8676106A886 /* SharedDataManager.swift */; };
+		BA822D71EC1D78ED556E84C4 /* ServerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CD7B9757636CC9D3043842 /* ServerRowView.swift */; };
+		BE554E9A010478E835D1ED11 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5847A776C7E2EC4D3D80B839 /* SwiftUI.framework */; };
+		C102F0F6BF1626930EE3C93B /* AddServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD233738A1DD9885066158 /* AddServerView.swift */; };
+		E4744107B74F648A53BB38D1 /* ServerWatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F42F06255069C0EAE98A61 /* ServerWatcherApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0F3BC1F1E6C1B9C04892430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36C5E31328AF7F1775252E11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB5BB91D7AB47437143BC60;
+			remoteInfo = ServerWatcherWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49E36C020F350CA8E1D1CF17 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				549ED7A718068583404E52B1 /* ServerWatcherWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00F42F06255069C0EAE98A61 /* ServerWatcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWatcherApp.swift; sourceTree = "<group>"; };
+		0AAE070C3DCF7B4717D8E3EC /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
+		143C1A21609C113803436FDB /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
+		1C6FA87EA38B4DCFFD317E4B /* ServerWatcherWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServerWatcherWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D037989F9DC8196BC3E722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B082BB9593689A9AAA1398D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		556B96D2F105B03115E82E92 /* ServerWatcherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWatcherWidget.swift; sourceTree = "<group>"; };
+		5847A776C7E2EC4D3D80B839 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		68CED892879B065B85FB100F /* ServerWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServerWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE152B0E7CFA87E8BCA9213 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7EC4F62A1E840EE1E69B8065 /* ServerWatcherWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServerWatcherWidget.entitlements; sourceTree = "<group>"; };
+		AC28BAF388A79064FC2801F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0B52244CFB3F8676106A886 /* SharedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataManager.swift; sourceTree = "<group>"; };
+		C1815FB4CE03C7DB9AF352FF /* ServerWatcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServerWatcher.entitlements; sourceTree = "<group>"; };
+		C7CD7B9757636CC9D3043842 /* ServerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRowView.swift; sourceTree = "<group>"; };
+		DE846F29617DA62535DCC39A /* ServerEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEntry.swift; sourceTree = "<group>"; };
+		F83ACE95CB1B428B58FC8921 /* ServerWatcherWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWatcherWidgetBundle.swift; sourceTree = "<group>"; };
+		FFAD233738A1DD9885066158 /* AddServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37D479A4F67075B8F31E1526 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01127DFE6FAA71512868AE45 /* WidgetKit.framework in Frameworks */,
+				BE554E9A010478E835D1ED11 /* SwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FAB1E60298007F3A0468CD5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0AAE070C3DCF7B4717D8E3EC /* ServerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2DF321C7527B2F135EA1A122 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFAD233738A1DD9885066158 /* AddServerView.swift */,
+				3B082BB9593689A9AAA1398D /* ContentView.swift */,
+				C7CD7B9757636CC9D3043842 /* ServerRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		302D34AD4AE2F62E40EBE1A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68CED892879B065B85FB100F /* ServerWatcher.app */,
+				1C6FA87EA38B4DCFFD317E4B /* ServerWatcherWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44C760D5EDB2F7F020E108E5 /* ServerWatcherWidget */ = {
+			isa = PBXGroup;
+			children = (
+				21D037989F9DC8196BC3E722 /* Assets.xcassets */,
+				7EC4F62A1E840EE1E69B8065 /* ServerWatcherWidget.entitlements */,
+				556B96D2F105B03115E82E92 /* ServerWatcherWidget.swift */,
+				F83ACE95CB1B428B58FC8921 /* ServerWatcherWidgetBundle.swift */,
+			);
+			path = ServerWatcherWidget;
+			sourceTree = "<group>";
+		};
+		4B5D996D53D752FB3B9A9E09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE846F29617DA62535DCC39A /* ServerEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78DD9FED4CE2DB8919898A1C /* ServerWatcher */ = {
+			isa = PBXGroup;
+			children = (
+				CA19BF24E32DBB0E9FD1FEB3 /* App */,
+				1FAB1E60298007F3A0468CD5 /* ViewModels */,
+				2DF321C7527B2F135EA1A122 /* Views */,
+				AC28BAF388A79064FC2801F2 /* Assets.xcassets */,
+				C1815FB4CE03C7DB9AF352FF /* ServerWatcher.entitlements */,
+			);
+			path = ServerWatcher;
+			sourceTree = "<group>";
+		};
+		A4AE89358E0A9F46B72B9807 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				143C1A21609C113803436FDB /* NetworkChecker.swift */,
+				B0B52244CFB3F8676106A886 /* SharedDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A7A90B7BE116C345DD17E6D2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4B5D996D53D752FB3B9A9E09 /* Models */,
+				A4AE89358E0A9F46B72B9807 /* Services */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B7FDD45A404C77485CFB63D3 = {
+			isa = PBXGroup;
+			children = (
+				78DD9FED4CE2DB8919898A1C /* ServerWatcher */,
+				44C760D5EDB2F7F020E108E5 /* ServerWatcherWidget */,
+				A7A90B7BE116C345DD17E6D2 /* Shared */,
+				FBFFDB502124891586786C53 /* Frameworks */,
+				302D34AD4AE2F62E40EBE1A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA19BF24E32DBB0E9FD1FEB3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				00F42F06255069C0EAE98A61 /* ServerWatcherApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FBFFDB502124891586786C53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5847A776C7E2EC4D3D80B839 /* SwiftUI.framework */,
+				7CE152B0E7CFA87E8BCA9213 /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AB5BB91D7AB47437143BC60 /* ServerWatcherWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 669D1A7DFA9F8CFC58E8AD7D /* Build configuration list for PBXNativeTarget "ServerWatcherWidgetExtension" */;
+			buildPhases = (
+				6037EE2ABF459E9016DD523A /* Sources */,
+				8DE1E4B9C36D8AB52A5A1BCF /* Resources */,
+				37D479A4F67075B8F31E1526 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServerWatcherWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = ServerWatcherWidgetExtension;
+			productReference = 1C6FA87EA38B4DCFFD317E4B /* ServerWatcherWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F1798D8ECDC34F2B93167EA8 /* ServerWatcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22DD3FDA3DA8F85F06D22B89 /* Build configuration list for PBXNativeTarget "ServerWatcher" */;
+			buildPhases = (
+				8AF7D1C28B72EFD575DF9DE7 /* Sources */,
+				9120E9A0BDDA17D7742784C1 /* Resources */,
+				49E36C020F350CA8E1D1CF17 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE79387C65796A115EF83EFD /* PBXTargetDependency */,
+			);
+			name = ServerWatcher;
+			packageProductDependencies = (
+			);
+			productName = ServerWatcher;
+			productReference = 68CED892879B065B85FB100F /* ServerWatcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36C5E31328AF7F1775252E11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 1CBA7E8A6EDD32C5C82E266F /* Build configuration list for PBXProject "ServerWatcher" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B7FDD45A404C77485CFB63D3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 302D34AD4AE2F62E40EBE1A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1798D8ECDC34F2B93167EA8 /* ServerWatcher */,
+				3AB5BB91D7AB47437143BC60 /* ServerWatcherWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DE1E4B9C36D8AB52A5A1BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A8CA081DD7EB54CF0570E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9120E9A0BDDA17D7742784C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918FE822768CE576EF4AF449 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6037EE2ABF459E9016DD523A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DD5FB3ADC3CA7897AEE280B /* NetworkChecker.swift in Sources */,
+				9925E2A59D705CB03354530D /* ServerEntry.swift in Sources */,
+				318EAF2A296B9E4077728605 /* ServerWatcherWidget.swift in Sources */,
+				3FA7D41356BBCE2A33DAB54E /* ServerWatcherWidgetBundle.swift in Sources */,
+				B4965C070CF7E350A3DB54F2 /* SharedDataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AF7D1C28B72EFD575DF9DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C102F0F6BF1626930EE3C93B /* AddServerView.swift in Sources */,
+				22D044017ECA3738B0BDD18A /* ContentView.swift in Sources */,
+				99011E274C66771C2EA1B45E /* NetworkChecker.swift in Sources */,
+				9AB436DE8F9A9FABF32973F4 /* ServerEntry.swift in Sources */,
+				BA822D71EC1D78ED556E84C4 /* ServerRowView.swift in Sources */,
+				80A0D09D28A996C5818FC152 /* ServerViewModel.swift in Sources */,
+				E4744107B74F648A53BB38D1 /* ServerWatcherApp.swift in Sources */,
+				5FF39D6E764EF6F89323D2FA /* SharedDataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE79387C65796A115EF83EFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AB5BB91D7AB47437143BC60 /* ServerWatcherWidgetExtension */;
+			targetProxy = F0F3BC1F1E6C1B9C04892430 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		75B63617FB18A42D859A245D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ServerWatcher/ServerWatcher.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7T2RAN9M82;
+				INFOPLIST_KEY_CFBundleDisplayName = "Server Watcher";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80DDA35E7295BBC5283BC75F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		903EF1EE79BF0E288E103F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ServerWatcherWidget/ServerWatcherWidget.entitlements;
+				DEVELOPMENT_TEAM = 7T2RAN9M82;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ServerWatcherWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Server Watcher Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B6B4AE69AC1E83A42E9E3F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		DAB63708DD607D6A444B464B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ServerWatcher/ServerWatcher.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7T2RAN9M82;
+				INFOPLIST_KEY_CFBundleDisplayName = "Server Watcher";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E3B9BD6EFF102FB46FC8714B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ServerWatcherWidget/ServerWatcherWidget.entitlements;
+				DEVELOPMENT_TEAM = 7T2RAN9M82;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ServerWatcherWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Server Watcher Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CBA7E8A6EDD32C5C82E266F /* Build configuration list for PBXProject "ServerWatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B6B4AE69AC1E83A42E9E3F5 /* Debug */,
+				80DDA35E7295BBC5283BC75F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		22DD3FDA3DA8F85F06D22B89 /* Build configuration list for PBXNativeTarget "ServerWatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75B63617FB18A42D859A245D /* Debug */,
+				DAB63708DD607D6A444B464B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		669D1A7DFA9F8CFC58E8AD7D /* Build configuration list for PBXNativeTarget "ServerWatcherWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				903EF1EE79BF0E288E103F3C /* Debug */,
+				E3B9BD6EFF102FB46FC8714B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36C5E31328AF7F1775252E11 /* Project object */;
+}

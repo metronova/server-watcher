@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'ServerWatcher' in project 'ServerWatcher'
+➜ Explicit dependency on target 'ServerWatcherWidgetExtension' in project 'ServerWatcher'
+Target 'ServerWatcherWidgetExtension' in project 'ServerWatcher' (no dependencies)

@@ -1,0 +1,99 @@
+{
+  "" : {
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcher-primary.dia",
+    "emit-module-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcher-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcher-primary-emit-module.dia",
+    "pch" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcher-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcher-primary.swiftdeps"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/ServerWatcher/App/ServerWatcherApp.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerWatcherApp~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/ServerWatcher/ViewModels/ServerViewModel.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerViewModel~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/ServerWatcher/Views/AddServerView.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/AddServerView~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/ServerWatcher/Views/ContentView.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/ServerWatcher/Views/ServerRowView.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerRowView~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/Shared/Models/ServerEntry.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/ServerEntry~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/Shared/Services/NetworkChecker.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/NetworkChecker~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/Shared/Services/SharedDataManager.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/SharedDataManager~partial.swiftmodule"
+  },
+  "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/lingfungshek/Documents/GitHub/server-watcher/build/ServerWatcher.build/Debug-iphoneos/ServerWatcher.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

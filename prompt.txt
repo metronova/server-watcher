@@ -1,0 +1,12 @@
+寫一個iOS的app, 是可以檢查特定網址/port/ip address的連接狀態，而且有widget功能，widget是顯示連接狀態的列表，要一頁顯示幾個，不要一頁一個
+
+widget寫了尚未添加伺服器，但main app已經添加了
+
+widget的padding少一點
+
+為這個app設計一個app icon
+
+為這個app 加入語言選項，語言預設英文
+為這個app 加入refresh時間選項，預設1分鐘
+
+要預設多國語言，什麼語言都要有
