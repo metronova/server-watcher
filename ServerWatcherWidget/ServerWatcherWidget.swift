@@ -6,6 +6,7 @@ import SwiftUI
 struct ServerStatusEntry: TimelineEntry {
     let date: Date
     let servers: [ServerEntry]
+    let strings: L10nStrings
 }
 
 // MARK: - Timeline Provider
@@ -14,27 +15,29 @@ struct ServerStatusProvider: TimelineProvider {
     let dataManager = SharedDataManager.shared
 
     func placeholder(in context: Context) -> ServerStatusEntry {
-        ServerStatusEntry(date: Date(), servers: ServerEntry.examples)
+        ServerStatusEntry(date: Date(), servers: ServerEntry.examples, strings: AppSettings.shared.strings)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (ServerStatusEntry) -> Void) {
         let servers = dataManager.loadServers()
+        let strings = AppSettings.shared.strings
         if servers.isEmpty {
-            completion(ServerStatusEntry(date: Date(), servers: ServerEntry.examples))
+            completion(ServerStatusEntry(date: Date(), servers: ServerEntry.examples, strings: strings))
         } else {
-            completion(ServerStatusEntry(date: Date(), servers: servers))
+            completion(ServerStatusEntry(date: Date(), servers: servers, strings: strings))
         }
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<ServerStatusEntry>) -> Void) {
         let servers = dataManager.loadServers()
         let checker = NetworkChecker.shared
+        let strings = AppSettings.shared.strings
 
         Task {
             let updatedServers = await checker.checkAllServers(servers)
             dataManager.saveServers(updatedServers)
 
-            let entry = ServerStatusEntry(date: Date(), servers: updatedServers)
+            let entry = ServerStatusEntry(date: Date(), servers: updatedServers, strings: strings)
             // Refresh every 15 minutes
             let nextUpdate = Calendar.current.date(byAdding: .minute, value: 15, to: Date())!
             let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
@@ -52,9 +55,9 @@ struct ServerWidgetEntryView: View {
     var maxItems: Int {
         switch family {
         case .systemSmall:
-            return 3
-        case .systemMedium:
             return 5
+        case .systemMedium:
+            return 6
         case .systemLarge:
             return 10
         case .systemExtraLarge:
@@ -92,7 +95,7 @@ struct ServerWidgetEntryView: View {
             Image(systemName: "server.rack")
                 .font(.title)
                 .foregroundStyle(.secondary)
-            Text("尚未添加伺服器")
+            Text(entry.strings.noServersWidget)
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }
@@ -107,7 +110,7 @@ struct ServerWidgetEntryView: View {
                 Image(systemName: "server.rack")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
-                Text("Server Watcher")
+                Text(entry.servers.count == 1 ? "Server" : "Servers")
                     .font(.caption2)
                     .fontWeight(.semibold)
                     .foregroundStyle(.secondary)
@@ -126,19 +129,20 @@ struct ServerWidgetEntryView: View {
             Spacer(minLength: 0)
 
             if entry.servers.count > maxItems {
-                Text("還有 \(entry.servers.count - maxItems) 個...")
+                Text(String(format: entry.strings.moreServersFormat, entry.servers.count - maxItems))
                     .font(.caption2)
                     .foregroundStyle(.tertiary)
             }
         }
-        .padding(8)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
     }
 
     // MARK: - Medium Widget
 
     private var mediumWidgetView: some View {
         VStack(alignment: .leading, spacing: 0) {
-            headerView
+            mediumHeaderView
                 .padding(.bottom, 4)
 
             let columns = splitIntoColumns(displayServers, count: 2)
@@ -164,7 +168,8 @@ struct ServerWidgetEntryView: View {
 
             footerView
         }
-        .padding(10)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
     }
 
     // MARK: - Large Widget
@@ -186,16 +191,25 @@ struct ServerWidgetEntryView: View {
 
             footerView
         }
-        .padding(12)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 6)
     }
 
     // MARK: - Header & Footer
 
     private var headerView: some View {
+        headerViewContent(title: entry.strings.appName)
+    }
+
+    private var mediumHeaderView: some View {
+        headerViewContent(title: entry.servers.count == 1 ? "Server" : "Servers")
+    }
+
+    private func headerViewContent(title: String) -> some View {
         HStack {
             Image(systemName: "server.rack")
                 .font(.caption2)
-            Text("Server Watcher")
+            Text(title)
                 .font(.caption)
                 .fontWeight(.semibold)
             Spacer()
@@ -222,7 +236,7 @@ struct ServerWidgetEntryView: View {
             if entry.servers.count > maxItems {
                 HStack {
                     Spacer()
-                    Text("還有 \(entry.servers.count - maxItems) 個伺服器")
+                    Text(String(format: entry.strings.moreServersFormat, entry.servers.count - maxItems))
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
                     Spacer()
@@ -313,6 +327,7 @@ struct ServerWidgetEntryView: View {
                         .foregroundStyle(.tertiary)
                 }
             }
+            .frame(width: 72, alignment: .trailing)
         }
         .padding(.vertical, 1)
     }
@@ -326,7 +341,7 @@ struct ServerWidgetEntryView: View {
 
     private func statusText(for server: ServerEntry) -> String {
         guard let isOnline = server.isOnline else { return "—" }
-        return isOnline ? "在線" : "離線"
+        return isOnline ? entry.strings.online : entry.strings.offline
     }
 
     private func splitIntoColumns(_ items: [ServerEntry], count: Int) -> [[ServerEntry]] {
@@ -349,8 +364,8 @@ struct ServerWatcherWidget: Widget {
             ServerWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
-        .configurationDisplayName("伺服器監控")
-        .description("顯示伺服器的連接狀態列表")
+        .configurationDisplayName(L10n.strings(for: AppSettings.shared.language).appName)
+        .description("")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
@@ -360,17 +375,17 @@ struct ServerWatcherWidget: Widget {
 #Preview("Small", as: .systemSmall) {
     ServerWatcherWidget()
 } timeline: {
-    ServerStatusEntry(date: Date(), servers: ServerEntry.examples)
+    ServerStatusEntry(date: Date(), servers: ServerEntry.examples, strings: .english)
 }
 
 #Preview("Medium", as: .systemMedium) {
     ServerWatcherWidget()
 } timeline: {
-    ServerStatusEntry(date: Date(), servers: ServerEntry.examples)
+    ServerStatusEntry(date: Date(), servers: ServerEntry.examples, strings: .english)
 }
 
 #Preview("Large", as: .systemLarge) {
     ServerWatcherWidget()
 } timeline: {
-    ServerStatusEntry(date: Date(), servers: ServerEntry.examples)
+    ServerStatusEntry(date: Date(), servers: ServerEntry.examples, strings: .english)
 }

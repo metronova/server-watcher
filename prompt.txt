@@ -10,3 +10,14 @@ widget的padding少一點
 為這個app 加入refresh時間選項，預設1分鐘
 
 要預設多國語言，什麼語言都要有
+
+介面加入版本號
+
+右上角的兩個按鈕可以分得開一點，以及左右padding多一點
+
+refresh button的左padding要和add button 的右padding一樣
+
+widget的上下padding可以減少
+
+2x2 (Medium) widget 標題改為 "Server" / "Servers"（根據數量單複數）
+2x4 (Large) widget 最多顯示 6 個伺服器

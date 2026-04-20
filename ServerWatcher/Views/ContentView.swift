@@ -2,8 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ServerViewModel()
+    @EnvironmentObject var settings: AppSettings
     @State private var showingAddServer = false
     @State private var editingServer: ServerEntry? = nil
+    @State private var showingSettings = false
+
+    private var s: L10nStrings { settings.strings }
 
     var body: some View {
         NavigationStack {
@@ -14,27 +18,36 @@ struct ContentView: View {
                     serverListView
                 }
             }
-            .navigationTitle("Server Watcher")
+            .navigationTitle(s.appName)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showingAddServer = true
-                    } label: {
-                        Image(systemName: "plus")
+                    HStack(spacing: 20) {
+                        if !viewModel.servers.isEmpty {
+                            Button {
+                                Task { await viewModel.checkAllServers() }
+                            } label: {
+                                if viewModel.isChecking {
+                                    ProgressView()
+                                } else {
+                                    Image(systemName: "arrow.clockwise")
+                                }
+                            }
+                            .disabled(viewModel.isChecking)
+                            .padding(.leading, 8)
+                        }
+                        Button {
+                            showingAddServer = true
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                        .padding(.trailing, 8)
                     }
                 }
                 ToolbarItem(placement: .topBarLeading) {
-                    if !viewModel.servers.isEmpty {
-                        Button {
-                            Task { await viewModel.checkAllServers() }
-                        } label: {
-                            if viewModel.isChecking {
-                                ProgressView()
-                            } else {
-                                Image(systemName: "arrow.clockwise")
-                            }
-                        }
-                        .disabled(viewModel.isChecking)
+                    Button {
+                        showingSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
                     }
                 }
             }
@@ -42,11 +55,17 @@ struct ContentView: View {
                 AddServerView { newServer in
                     viewModel.addServer(newServer)
                 }
+                .environmentObject(settings)
             }
             .sheet(item: $editingServer) { server in
                 AddServerView(existingServer: server) { updatedServer in
                     viewModel.updateServer(updatedServer)
                 }
+                .environmentObject(settings)
+            }
+            .sheet(isPresented: $showingSettings) {
+                SettingsView()
+                    .environmentObject(settings)
             }
             .refreshable {
                 await viewModel.checkAllServers()
@@ -59,16 +78,16 @@ struct ContentView: View {
             Image(systemName: "server.rack")
                 .font(.system(size: 64))
                 .foregroundStyle(.secondary)
-            Text("尚未添加伺服器")
+            Text(s.noServersTitle)
                 .font(.title2)
                 .foregroundStyle(.secondary)
-            Text("點擊右上角 + 添加要監控的伺服器")
+            Text(s.noServersSubtitle)
                 .font(.subheadline)
                 .foregroundStyle(.tertiary)
             Button {
                 showingAddServer = true
             } label: {
-                Label("添加伺服器", systemImage: "plus")
+                Label(s.addServer, systemImage: "plus")
                     .padding(.horizontal, 20)
                     .padding(.vertical, 10)
             }
@@ -91,14 +110,14 @@ struct ContentView: View {
                     Button(role: .destructive) {
                         viewModel.deleteServer(server)
                     } label: {
-                        Label("刪除", systemImage: "trash")
+                        Label(s.delete, systemImage: "trash")
                     }
                 }
                 .swipeActions(edge: .leading, allowsFullSwipe: true) {
                     Button {
                         Task { await viewModel.checkServer(server) }
                     } label: {
-                        Label("檢查", systemImage: "arrow.clockwise")
+                        Label(s.check, systemImage: "arrow.clockwise")
                     }
                     .tint(.blue)
                 }
@@ -109,7 +128,7 @@ struct ContentView: View {
 
             if let lastChecked = viewModel.servers.compactMap({ $0.lastChecked }).max() {
                 Section {
-                    Text("最後檢查: \(lastChecked.formatted(date: .abbreviated, time: .standard))")
+                    Text("\(s.lastCheckedPrefix): \(lastChecked.formatted(date: .abbreviated, time: .standard))")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -123,4 +142,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(AppSettings.shared)
 }

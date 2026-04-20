@@ -1,8 +1,11 @@
 import SwiftUI
 
 struct ServerRowView: View {
+    @EnvironmentObject var settings: AppSettings
     let server: ServerEntry
     let onCheck: () -> Void
+
+    private var s: L10nStrings { settings.strings }
 
     var body: some View {
         HStack(spacing: 12) {
@@ -61,9 +64,9 @@ struct ServerRowView: View {
 
     private var statusText: String {
         guard let isOnline = server.isOnline else {
-            return "未檢查"
+            return s.notChecked
         }
-        return isOnline ? "在線" : "離線"
+        return isOnline ? s.online : s.offline
     }
 }
 
@@ -73,4 +76,5 @@ struct ServerRowView: View {
         ServerRowView(server: ServerEntry(name: "Offline Server", host: "192.168.1.1", port: 8080, checkType: .tcp, isOnline: false, lastChecked: Date())) {}
         ServerRowView(server: ServerEntry(name: "Unknown", host: "example.com", checkType: .http)) {}
     }
+    .environmentObject(AppSettings.shared)
 }

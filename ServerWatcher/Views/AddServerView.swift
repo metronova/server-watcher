@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AddServerView: View {
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var settings: AppSettings
 
     @State private var name: String = ""
     @State private var host: String = ""
@@ -18,24 +19,25 @@ struct AddServerView: View {
         self.onSave = onSave
     }
 
+    private var s: L10nStrings { settings.strings }
     var isEditing: Bool { existingServer != nil }
 
     var body: some View {
         NavigationStack {
             Form {
-                Section("基本資訊") {
-                    TextField("名稱", text: $name)
+                Section(s.basicInfo) {
+                    TextField(s.nameLabel, text: $name)
                         .textContentType(.name)
 
-                    TextField("主機位址 (URL / IP)", text: $host)
+                    TextField(s.hostPlaceholder, text: $host)
                         .textContentType(.URL)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                         .keyboardType(.URL)
                 }
 
-                Section("檢查方式") {
-                    Picker("類型", selection: $checkType) {
+                Section(s.checkMethod) {
+                    Picker(s.typeLabel, selection: $checkType) {
                         ForEach(CheckType.allCases) { type in
                             Text(type.displayName).tag(type)
                         }
@@ -43,12 +45,12 @@ struct AddServerView: View {
                     .pickerStyle(.segmented)
 
                     if checkType == .tcp {
-                        TextField("端口 (Port)", text: $portString)
+                        TextField(s.portLabel, text: $portString)
                             .keyboardType(.numberPad)
                     }
 
                     if checkType == .http {
-                        TextField("端口 (可選)", text: $portString)
+                        TextField(s.portOptional, text: $portString)
                             .keyboardType(.numberPad)
                     }
                 }
@@ -59,31 +61,31 @@ struct AddServerView: View {
                             .foregroundStyle(.blue)
                         switch checkType {
                         case .http:
-                            Text("將發送 HTTP HEAD 請求來檢查連接狀態")
+                            Text(s.httpDescription)
                         case .tcp:
-                            Text("將嘗試建立 TCP 連接來檢查端口是否開啟")
+                            Text(s.tcpDescription)
                         }
                     }
                     .font(.caption)
                     .foregroundStyle(.secondary)
                 }
             }
-            .navigationTitle(isEditing ? "編輯伺服器" : "添加伺服器")
+            .navigationTitle(isEditing ? s.editServer : s.addServer)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("取消") { dismiss() }
+                    Button(s.cancel) { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button(isEditing ? "儲存" : "添加") {
+                    Button(isEditing ? s.save : s.add) {
                         saveServer()
                     }
                     .fontWeight(.semibold)
                     .disabled(name.isEmpty || host.isEmpty)
                 }
             }
-            .alert("錯誤", isPresented: $showingError) {
-                Button("確定") {}
+            .alert(s.error, isPresented: $showingError) {
+                Button(s.ok) {}
             } message: {
                 Text(errorMessage)
             }
@@ -103,13 +105,13 @@ struct AddServerView: View {
         let trimmedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
 
         guard !trimmedName.isEmpty else {
-            errorMessage = "請輸入伺服器名稱"
+            errorMessage = s.nameRequired
             showingError = true
             return
         }
 
         guard !trimmedHost.isEmpty else {
-            errorMessage = "請輸入主機位址"
+            errorMessage = s.hostRequired
             showingError = true
             return
         }
@@ -117,7 +119,7 @@ struct AddServerView: View {
         var port: Int? = nil
         if !portString.isEmpty {
             guard let p = Int(portString), p > 0, p <= 65535 else {
-                errorMessage = "端口必須是 1-65535 之間的數字"
+                errorMessage = s.invalidPort
                 showingError = true
                 return
             }
@@ -125,7 +127,7 @@ struct AddServerView: View {
         }
 
         if checkType == .tcp && port == nil {
-            errorMessage = "TCP 檢查需要指定端口"
+            errorMessage = s.tcpPortRequired
             showingError = true
             return
         }
@@ -145,4 +147,5 @@ struct AddServerView: View {
     AddServerView { server in
         print(server)
     }
+    .environmentObject(AppSettings.shared)
 }

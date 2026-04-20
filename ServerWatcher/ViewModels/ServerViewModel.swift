@@ -10,10 +10,17 @@ class ServerViewModel: ObservableObject {
     private let dataManager = SharedDataManager.shared
     private let networkChecker = NetworkChecker.shared
     private var autoCheckTimer: Timer?
+    private var settingsCancellable: AnyCancellable?
 
     init() {
         loadServers()
         startAutoCheck()
+        // Restart timer whenever refresh interval changes
+        settingsCancellable = AppSettings.shared.objectWillChange
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.restartAutoCheck()
+            }
     }
 
     deinit {
@@ -71,11 +78,18 @@ class ServerViewModel: ObservableObject {
     }
 
     private func startAutoCheck() {
-        // Auto check every 5 minutes
-        autoCheckTimer = Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { [weak self] _ in
+        let interval = AppSettings.shared.refreshInterval.rawValue
+        guard interval > 0 else { return }
+        autoCheckTimer = Timer.scheduledTimer(withTimeInterval: TimeInterval(interval), repeats: true) { [weak self] _ in
             Task { @MainActor [weak self] in
                 await self?.checkAllServers()
             }
         }
+    }
+
+    private func restartAutoCheck() {
+        autoCheckTimer?.invalidate()
+        autoCheckTimer = nil
+        startAutoCheck()
     }
 }

@@ -17,13 +17,18 @@
 		6DD5FB3ADC3CA7897AEE280B /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C1A21609C113803436FDB /* NetworkChecker.swift */; };
 		80A0D09D28A996C5818FC152 /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE070C3DCF7B4717D8E3EC /* ServerViewModel.swift */; };
 		918FE822768CE576EF4AF449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC28BAF388A79064FC2801F2 /* Assets.xcassets */; };
+		95DF3383D2ADCFA4A774A686 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD48CDC9B0F8908EA957731 /* AppSettings.swift */; };
 		99011E274C66771C2EA1B45E /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C1A21609C113803436FDB /* NetworkChecker.swift */; };
 		9925E2A59D705CB03354530D /* ServerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE846F29617DA62535DCC39A /* ServerEntry.swift */; };
 		9AB436DE8F9A9FABF32973F4 /* ServerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE846F29617DA62535DCC39A /* ServerEntry.swift */; };
+		B27851B23BBF69460A5BCA66 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD48CDC9B0F8908EA957731 /* AppSettings.swift */; };
 		B4965C070CF7E350A3DB54F2 /* SharedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B52244CFB3F8676106A886 /* SharedDataManager.swift */; };
+		B82DC5F56234E203710E61BB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F98E18AB154A087FA56F9 /* SettingsView.swift */; };
 		BA822D71EC1D78ED556E84C4 /* ServerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CD7B9757636CC9D3043842 /* ServerRowView.swift */; };
 		BE554E9A010478E835D1ED11 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5847A776C7E2EC4D3D80B839 /* SwiftUI.framework */; };
 		C102F0F6BF1626930EE3C93B /* AddServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD233738A1DD9885066158 /* AddServerView.swift */; };
+		C897BE31C25727B31AC95917 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2125BEED707F4F74DE53E310 /* L10n.swift */; };
+		C97B79BC731F0449C4998D38 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2125BEED707F4F74DE53E310 /* L10n.swift */; };
 		E4744107B74F648A53BB38D1 /* ServerWatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F42F06255069C0EAE98A61 /* ServerWatcherApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,9 +58,12 @@
 
 /* Begin PBXFileReference section */
 		00F42F06255069C0EAE98A61 /* ServerWatcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWatcherApp.swift; sourceTree = "<group>"; };
+		041F98E18AB154A087FA56F9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0AAE070C3DCF7B4717D8E3EC /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
 		143C1A21609C113803436FDB /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
+		1BD48CDC9B0F8908EA957731 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		1C6FA87EA38B4DCFFD317E4B /* ServerWatcherWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServerWatcherWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2125BEED707F4F74DE53E310 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		21D037989F9DC8196BC3E722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B082BB9593689A9AAA1398D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		556B96D2F105B03115E82E92 /* ServerWatcherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWatcherWidget.swift; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 				FFAD233738A1DD9885066158 /* AddServerView.swift */,
 				3B082BB9593689A9AAA1398D /* ContentView.swift */,
 				C7CD7B9757636CC9D3043842 /* ServerRowView.swift */,
+				041F98E18AB154A087FA56F9 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 		4B5D996D53D752FB3B9A9E09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1BD48CDC9B0F8908EA957731 /* AppSettings.swift */,
 				DE846F29617DA62535DCC39A /* ServerEntry.swift */,
 			);
 			path = Models;
@@ -155,10 +165,19 @@
 		A7A90B7BE116C345DD17E6D2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A82F98492E406FFD2C64CD66 /* Localization */,
 				4B5D996D53D752FB3B9A9E09 /* Models */,
 				A4AE89358E0A9F46B72B9807 /* Services */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		A82F98492E406FFD2C64CD66 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				2125BEED707F4F74DE53E310 /* L10n.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		B7FDD45A404C77485CFB63D3 = {
@@ -284,6 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27851B23BBF69460A5BCA66 /* AppSettings.swift in Sources */,
+				C897BE31C25727B31AC95917 /* L10n.swift in Sources */,
 				6DD5FB3ADC3CA7897AEE280B /* NetworkChecker.swift in Sources */,
 				9925E2A59D705CB03354530D /* ServerEntry.swift in Sources */,
 				318EAF2A296B9E4077728605 /* ServerWatcherWidget.swift in Sources */,
@@ -297,12 +318,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C102F0F6BF1626930EE3C93B /* AddServerView.swift in Sources */,
+				95DF3383D2ADCFA4A774A686 /* AppSettings.swift in Sources */,
 				22D044017ECA3738B0BDD18A /* ContentView.swift in Sources */,
+				C97B79BC731F0449C4998D38 /* L10n.swift in Sources */,
 				99011E274C66771C2EA1B45E /* NetworkChecker.swift in Sources */,
 				9AB436DE8F9A9FABF32973F4 /* ServerEntry.swift in Sources */,
 				BA822D71EC1D78ED556E84C4 /* ServerRowView.swift in Sources */,
 				80A0D09D28A996C5818FC152 /* ServerViewModel.swift in Sources */,
 				E4744107B74F648A53BB38D1 /* ServerWatcherApp.swift in Sources */,
+				B82DC5F56234E203710E61BB /* SettingsView.swift in Sources */,
 				5FF39D6E764EF6F89323D2FA /* SharedDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ServerWatcher/ServerWatcher.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 26.0420.21;
 				DEVELOPMENT_TEAM = 7T2RAN9M82;
 				INFOPLIST_KEY_CFBundleDisplayName = "Server Watcher";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -336,6 +361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 26.0420.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,6 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ServerWatcher/ServerWatcher.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 26.0420.21;
 				DEVELOPMENT_TEAM = 7T2RAN9M82;
 				INFOPLIST_KEY_CFBundleDisplayName = "Server Watcher";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -503,6 +530,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 26.0420.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
