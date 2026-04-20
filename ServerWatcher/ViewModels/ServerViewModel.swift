@@ -77,6 +77,31 @@ class ServerViewModel: ObservableObject {
         WidgetCenter.shared.reloadAllTimelines()
     }
 
+    func exportData() throws -> Data {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        let exportable = servers.map { s -> ServerEntry in
+            var e = s; e.isOnline = nil; e.lastChecked = nil; return e
+        }
+        return try encoder.encode(exportable)
+    }
+
+    func importServers(from data: Data, merge: Bool) throws {
+        let decoder = JSONDecoder()
+        var imported = try decoder.decode([ServerEntry].self, from: data)
+        imported = imported.map { s -> ServerEntry in
+            var e = s; e.isOnline = nil; e.lastChecked = nil; return e
+        }
+        if merge {
+            let existingIDs = Set(servers.map { $0.id })
+            let newOnes = imported.filter { !existingIDs.contains($0.id) }
+            servers.append(contentsOf: newOnes)
+        } else {
+            servers = imported
+        }
+        saveAndNotify()
+    }
+
     private func startAutoCheck() {
         let interval = AppSettings.shared.refreshInterval.rawValue
         guard interval > 0 else { return }

@@ -64,7 +64,7 @@ struct ContentView: View {
                 .environmentObject(settings)
             }
             .sheet(isPresented: $showingSettings) {
-                SettingsView()
+                SettingsView(viewModel: viewModel)
                     .environmentObject(settings)
             }
             .refreshable {

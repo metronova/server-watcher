@@ -13,6 +13,7 @@
 		38A8CA081DD7EB54CF0570E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D037989F9DC8196BC3E722 /* Assets.xcassets */; };
 		3FA7D41356BBCE2A33DAB54E /* ServerWatcherWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83ACE95CB1B428B58FC8921 /* ServerWatcherWidgetBundle.swift */; };
 		549ED7A718068583404E52B1 /* ServerWatcherWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1C6FA87EA38B4DCFFD317E4B /* ServerWatcherWidgetExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C68F424B31D00F1794BD36B /* ServerListDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63EBFED0A64E892B332DC5 /* ServerListDocument.swift */; };
 		5FF39D6E764EF6F89323D2FA /* SharedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B52244CFB3F8676106A886 /* SharedDataManager.swift */; };
 		6DD5FB3ADC3CA7897AEE280B /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C1A21609C113803436FDB /* NetworkChecker.swift */; };
 		80A0D09D28A996C5818FC152 /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE070C3DCF7B4717D8E3EC /* ServerViewModel.swift */; };
@@ -66,6 +67,7 @@
 		2125BEED707F4F74DE53E310 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		21D037989F9DC8196BC3E722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B082BB9593689A9AAA1398D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E63EBFED0A64E892B332DC5 /* ServerListDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListDocument.swift; sourceTree = "<group>"; };
 		556B96D2F105B03115E82E92 /* ServerWatcherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWatcherWidget.swift; sourceTree = "<group>"; };
 		5847A776C7E2EC4D3D80B839 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		68CED892879B065B85FB100F /* ServerWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServerWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +143,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5A97EC1158FC67B1B2CC29B4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E63EBFED0A64E892B332DC5 /* ServerListDocument.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		78DD9FED4CE2DB8919898A1C /* ServerWatcher */ = {
 			isa = PBXGroup;
 			children = (
 				CA19BF24E32DBB0E9FD1FEB3 /* App */,
+				5A97EC1158FC67B1B2CC29B4 /* Models */,
 				1FAB1E60298007F3A0468CD5 /* ViewModels */,
 				2DF321C7527B2F135EA1A122 /* Views */,
 				AC28BAF388A79064FC2801F2 /* Assets.xcassets */,
@@ -323,6 +334,7 @@
 				C97B79BC731F0449C4998D38 /* L10n.swift in Sources */,
 				99011E274C66771C2EA1B45E /* NetworkChecker.swift in Sources */,
 				9AB436DE8F9A9FABF32973F4 /* ServerEntry.swift in Sources */,
+				5C68F424B31D00F1794BD36B /* ServerListDocument.swift in Sources */,
 				BA822D71EC1D78ED556E84C4 /* ServerRowView.swift in Sources */,
 				80A0D09D28A996C5818FC152 /* ServerViewModel.swift in Sources */,
 				E4744107B74F648A53BB38D1 /* ServerWatcherApp.swift in Sources */,
@@ -431,6 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ServerWatcherWidget/ServerWatcherWidget.entitlements;
+				CURRENT_PROJECT_VERSION = 26.0420.21;
 				DEVELOPMENT_TEAM = 7T2RAN9M82;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = ServerWatcherWidget/Info.plist;
@@ -441,6 +454,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 26.0420.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,6 +557,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ServerWatcherWidget/ServerWatcherWidget.entitlements;
+				CURRENT_PROJECT_VERSION = 26.0420.21;
 				DEVELOPMENT_TEAM = 7T2RAN9M82;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = ServerWatcherWidget/Info.plist;
@@ -553,6 +568,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 26.0420.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

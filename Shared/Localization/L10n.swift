@@ -65,6 +65,17 @@ struct L10nStrings {
     // Widget
     let noServersWidget: String
     let moreServersFormat: String   // use with String(format:, count)
+
+    // Data management
+    var exportServers: String = "Export Servers"
+    var importServers: String = "Import Servers"
+    var importMerge: String = "Merge"
+    var importReplace: String = "Replace All"
+    var importSuccess: String = "Imported Successfully"
+    var importFailed: String = "Import Failed"
+    var dataSection: String = "Data"
+    var importChoiceTitle: String = "Import Options"
+    var importChoiceMessage: String = "Merge: add new servers to your existing list.\nReplace All: delete your current list and use the imported file instead."
 }
 
 // MARK: - L10n
@@ -193,7 +204,16 @@ extension L10nStrings {
         min30: "30 分鐘",
         never: "從不",
         noServersWidget: "尚未添加伺服器",
-        moreServersFormat: "還有 %d 個..."
+        moreServersFormat: "還有 %d 個...",
+        exportServers: "匯出伺服器",
+        importServers: "匯入伺服器",
+        importMerge: "合併",
+        importReplace: "取代全部",
+        importSuccess: "匯入成功",
+        importFailed: "匯入失敗",
+        dataSection: "資料",
+        importChoiceTitle: "匯入選項",
+        importChoiceMessage: "合併：將匯入的伺服器加入現有清單，不刪除任何資料。\n取代全部：刪除現有所有伺服器，完全以匯入的檔案取代。"
     )
 
     static let simplifiedChinese = L10nStrings(
@@ -241,7 +261,16 @@ extension L10nStrings {
         min30: "30 分钟",
         never: "从不",
         noServersWidget: "暂无服务器",
-        moreServersFormat: "还有 %d 个..."
+        moreServersFormat: "还有 %d 个...",
+        exportServers: "导出服务器",
+        importServers: "导入服务器",
+        importMerge: "合并",
+        importReplace: "替换全部",
+        importSuccess: "导入成功",
+        importFailed: "导入失败",
+        dataSection: "数据",
+        importChoiceTitle: "导入选项",
+        importChoiceMessage: "合并：将导入的服务器添加到现有列表，不删除任何数据。\n替换全部：删除所有现有服务器，完全使用导入的文件替换。"
     )
 
     static let japanese = L10nStrings(
@@ -289,7 +318,16 @@ extension L10nStrings {
         min30: "30 分",
         never: "なし",
         noServersWidget: "サーバーなし",
-        moreServersFormat: "他 %d 件..."
+        moreServersFormat: "他 %d 件...",
+        exportServers: "サーバーをエクスポート",
+        importServers: "サーバーをインポート",
+        importMerge: "結合",
+        importReplace: "すべて置換",
+        importSuccess: "インポート成功",
+        importFailed: "インポート失敗",
+        dataSection: "データ",
+        importChoiceTitle: "インポートオプション",
+        importChoiceMessage: "結合：インポートしたサーバーを既存のリストに追加します。データは削除されません。\nすべて置換：既存のサーバーをすべて削除し、インポートしたファイルで置き換えます。"
     )
 
     static let korean = L10nStrings(
@@ -337,7 +375,16 @@ extension L10nStrings {
         min30: "30 분",
         never: "안 함",
         noServersWidget: "서버 없음",
-        moreServersFormat: "%d개 더..."
+        moreServersFormat: "%d개 더...",
+        exportServers: "서버 내보내기",
+        importServers: "서버 가져오기",
+        importMerge: "병합",
+        importReplace: "모두 교체",
+        importSuccess: "가져오기 성공",
+        importFailed: "가져오기 실패",
+        dataSection: "데이터",
+        importChoiceTitle: "가져오기 옵션",
+        importChoiceMessage: "병합: 가져온 서버를 기존 목록에 추가합니다. 기존 데이터는 삭제되지 않습니다.\n모두 교체: 기존 서버를 모두 삭제하고 가져온 파일로 완전히 대체합니다."
     )
 
     static let french = L10nStrings(
@@ -385,7 +432,16 @@ extension L10nStrings {
         min30: "30 minutes",
         never: "Jamais",
         noServersWidget: "Aucun serveur",
-        moreServersFormat: "+%d autres"
+        moreServersFormat: "+%d autres",
+        exportServers: "Exporter les serveurs",
+        importServers: "Importer les serveurs",
+        importMerge: "Fusionner",
+        importReplace: "Remplacer tout",
+        importSuccess: "Importation réussie",
+        importFailed: "Échec de l'importation",
+        dataSection: "Données",
+        importChoiceTitle: "Options d'importation",
+        importChoiceMessage: "Fusionner : ajoute les serveurs importés à votre liste sans supprimer l'existant.\nRemplacer tout : supprime tous vos serveurs actuels et les remplace par le fichier importé."
     )
 
     static let german = L10nStrings(
@@ -433,7 +489,16 @@ extension L10nStrings {
         min30: "30 Minuten",
         never: "Nie",
         noServersWidget: "Keine Server",
-        moreServersFormat: "+%d weitere"
+        moreServersFormat: "+%d weitere",
+        exportServers: "Server exportieren",
+        importServers: "Server importieren",
+        importMerge: "Zusammenführen",
+        importReplace: "Alle ersetzen",
+        importSuccess: "Import erfolgreich",
+        importFailed: "Import fehlgeschlagen",
+        dataSection: "Daten",
+        importChoiceTitle: "Importoptionen",
+        importChoiceMessage: "Zusammenführen: Importierte Server zur bestehenden Liste hinzufügen, ohne Daten zu löschen.\nAlle ersetzen: Alle vorhandenen Server löschen und durch die importierte Datei ersetzen."
     )
 
     static let spanish = L10nStrings(
@@ -481,7 +546,16 @@ extension L10nStrings {
         min30: "30 minutos",
         never: "Nunca",
         noServersWidget: "Sin servidores",
-        moreServersFormat: "+%d más"
+        moreServersFormat: "+%d más",
+        exportServers: "Exportar servidores",
+        importServers: "Importar servidores",
+        importMerge: "Combinar",
+        importReplace: "Reemplazar todo",
+        importSuccess: "Importación exitosa",
+        importFailed: "Error al importar",
+        dataSection: "Datos",
+        importChoiceTitle: "Opciones de importación",
+        importChoiceMessage: "Combinar: añade los servidores importados a tu lista actual sin eliminar nada.\nReemplazar todo: elimina todos los servidores actuales y los sustituye por el archivo importado."
     )
 
     static let portuguese = L10nStrings(
@@ -529,7 +603,16 @@ extension L10nStrings {
         min30: "30 minutos",
         never: "Nunca",
         noServersWidget: "Sem servidores",
-        moreServersFormat: "+%d mais"
+        moreServersFormat: "+%d mais",
+        exportServers: "Exportar servidores",
+        importServers: "Importar servidores",
+        importMerge: "Mesclar",
+        importReplace: "Substituir tudo",
+        importSuccess: "Importação bem-sucedida",
+        importFailed: "Falha na importação",
+        dataSection: "Dados",
+        importChoiceTitle: "Opções de importação",
+        importChoiceMessage: "Mesclar: adiciona os servidores importados à lista existente sem apagar nada.\nSubstituir tudo: apaga todos os servidores atuais e os substitui pelo arquivo importado."
     )
 
     static let italian = L10nStrings(
@@ -577,7 +660,16 @@ extension L10nStrings {
         min30: "30 minuti",
         never: "Mai",
         noServersWidget: "Nessun server",
-        moreServersFormat: "+%d altri"
+        moreServersFormat: "+%d altri",
+        exportServers: "Esporta server",
+        importServers: "Importa server",
+        importMerge: "Unisci",
+        importReplace: "Sostituisci tutti",
+        importSuccess: "Importazione riuscita",
+        importFailed: "Importazione fallita",
+        dataSection: "Dati",
+        importChoiceTitle: "Opzioni di importazione",
+        importChoiceMessage: "Unisci: aggiunge i server importati all'elenco esistente senza eliminare nulla.\nSostituisci tutti: elimina tutti i server attuali e li sostituisce con il file importato."
     )
 
     static let dutch = L10nStrings(
@@ -625,7 +717,16 @@ extension L10nStrings {
         min30: "30 minuten",
         never: "Nooit",
         noServersWidget: "Geen servers",
-        moreServersFormat: "+%d meer"
+        moreServersFormat: "+%d meer",
+        exportServers: "Servers exporteren",
+        importServers: "Servers importeren",
+        importMerge: "Samenvoegen",
+        importReplace: "Alles vervangen",
+        importSuccess: "Importeren geslaagd",
+        importFailed: "Importeren mislukt",
+        dataSection: "Gegevens",
+        importChoiceTitle: "Importeeropties",
+        importChoiceMessage: "Samenvoegen: voegt geïmporteerde servers toe aan de bestaande lijst zonder iets te verwijderen.\nAlles vervangen: verwijdert alle huidige servers en vervangt ze door het geïmporteerde bestand."
     )
 
     static let russian = L10nStrings(
@@ -673,7 +774,16 @@ extension L10nStrings {
         min30: "30 минут",
         never: "Никогда",
         noServersWidget: "Серверов нет",
-        moreServersFormat: "ещё %d..."
+        moreServersFormat: "ещё %d...",
+        exportServers: "Экспорт серверов",
+        importServers: "Импорт серверов",
+        importMerge: "Объединить",
+        importReplace: "Заменить все",
+        importSuccess: "Импорт выполнен",
+        importFailed: "Ошибка импорта",
+        dataSection: "Данные",
+        importChoiceTitle: "Параметры импорта",
+        importChoiceMessage: "Объединить: добавляет импортированные серверы в существующий список без удаления данных.\nЗаменить все: удаляет все текущие серверы и заменяет их импортированным файлом."
     )
 
     static let arabic = L10nStrings(
@@ -721,7 +831,16 @@ extension L10nStrings {
         min30: "٣٠ دقيقة",
         never: "أبداً",
         noServersWidget: "لا توجد خوادم",
-        moreServersFormat: "%d أكثر"
+        moreServersFormat: "%d أكثر",
+        exportServers: "تصدير الخوادم",
+        importServers: "استيراد الخوادم",
+        importMerge: "دمج",
+        importReplace: "استبدال الكل",
+        importSuccess: "تم الاستيراد بنجاح",
+        importFailed: "فشل الاستيراد",
+        dataSection: "البيانات",
+        importChoiceTitle: "خيارات الاستيراد",
+        importChoiceMessage: "دمج: يضيف الخوادم المستوردة إلى القائمة الحالية دون حذف أي بيانات.\nاستبدال الكل: يحذف جميع الخوادم الحالية ويستبدلها بالملف المستورد."
     )
 
     static let thai = L10nStrings(
@@ -769,7 +888,16 @@ extension L10nStrings {
         min30: "30 นาที",
         never: "ไม่เลย",
         noServersWidget: "ไม่มีเซิร์ฟเวอร์",
-        moreServersFormat: "อีก %d ..."
+        moreServersFormat: "อีก %d ...",
+        exportServers: "ส่งออกเซิร์ฟเวอร์",
+        importServers: "นำเข้าเซิร์ฟเวอร์",
+        importMerge: "รวม",
+        importReplace: "แทนที่ทั้งหมด",
+        importSuccess: "นำเข้าสำเร็จ",
+        importFailed: "นำเข้าล้มเหลว",
+        dataSection: "ข้อมูล",
+        importChoiceTitle: "ตัวเลือกการนำเข้า",
+        importChoiceMessage: "รวม: เพิ่มเซิร์ฟเวอร์ที่นำเข้าลงในรายการปัจจุบันโดยไม่ลบข้อมูลใดๆ\nแทนที่ทั้งหมด: ลบเซิร์ฟเวอร์ทั้งหมดและแทนที่ด้วยไฟล์ที่นำเข้า"
     )
 
     static let vietnamese = L10nStrings(
@@ -817,7 +945,16 @@ extension L10nStrings {
         min30: "30 phút",
         never: "Không bao giờ",
         noServersWidget: "Không có máy chủ",
-        moreServersFormat: "+%d khác"
+        moreServersFormat: "+%d khác",
+        exportServers: "Xuất máy chủ",
+        importServers: "Nhập máy chủ",
+        importMerge: "Hợp nhất",
+        importReplace: "Thay thế tất cả",
+        importSuccess: "Nhập thành công",
+        importFailed: "Nhập thất bại",
+        dataSection: "Dữ liệu",
+        importChoiceTitle: "Tùy chọn nhập",
+        importChoiceMessage: "Hợp nhất: thêm máy chủ đã nhập vào danh sách hiện có mà không xóa dữ liệu.\nThay thế tất cả: xóa toàn bộ máy chủ hiện tại và thay bằng file đã nhập."
     )
 
     static let indonesian = L10nStrings(
@@ -865,7 +1002,16 @@ extension L10nStrings {
         min30: "30 menit",
         never: "Tidak pernah",
         noServersWidget: "Tidak ada server",
-        moreServersFormat: "+%d lainnya"
+        moreServersFormat: "+%d lainnya",
+        exportServers: "Ekspor server",
+        importServers: "Impor server",
+        importMerge: "Gabungkan",
+        importReplace: "Ganti semua",
+        importSuccess: "Impor berhasil",
+        importFailed: "Impor gagal",
+        dataSection: "Data",
+        importChoiceTitle: "Opsi impor",
+        importChoiceMessage: "Gabungkan: menambahkan server yang diimpor ke daftar yang ada tanpa menghapus data.\nGanti semua: menghapus semua server saat ini dan menggantinya dengan file yang diimpor."
     )
 
     static let polish = L10nStrings(
@@ -913,7 +1059,16 @@ extension L10nStrings {
         min30: "30 minut",
         never: "Nigdy",
         noServersWidget: "Brak serwerów",
-        moreServersFormat: "+%d więcej"
+        moreServersFormat: "+%d więcej",
+        exportServers: "Eksportuj serwery",
+        importServers: "Importuj serwery",
+        importMerge: "Scal",
+        importReplace: "Zastąp wszystko",
+        importSuccess: "Import zakończony sukcesem",
+        importFailed: "Import nie powiódł się",
+        dataSection: "Dane",
+        importChoiceTitle: "Opcje importu",
+        importChoiceMessage: "Scal: dodaje zaimportowane serwery do istniejącej listy bez usuwania danych.\nZastąp wszystko: usuwa wszystkie obecne serwery i zastępuje je zaimportowanym plikiem."
     )
 
     static let turkish = L10nStrings(
@@ -961,7 +1116,16 @@ extension L10nStrings {
         min30: "30 dakika",
         never: "Hiçbir zaman",
         noServersWidget: "Sunucu yok",
-        moreServersFormat: "+%d daha"
+        moreServersFormat: "+%d daha",
+        exportServers: "Sunucuları dışa aktar",
+        importServers: "Sunucuları içe aktar",
+        importMerge: "Birleştir",
+        importReplace: "Tümünü değiştir",
+        importSuccess: "İçe aktarma başarılı",
+        importFailed: "İçe aktarma başarısız",
+        dataSection: "Veri",
+        importChoiceTitle: "İçe aktarma seçenekleri",
+        importChoiceMessage: "Birleştir: içe aktarılan sunucuları mevcut listeye ekler, hiçbir veriyi silmez.\nTümünü değiştir: mevcut tüm sunucuları siler ve içe aktarılan dosyayla değiştirir."
     )
 
     static let ukrainian = L10nStrings(
@@ -1009,7 +1173,16 @@ extension L10nStrings {
         min30: "30 хвилин",
         never: "Ніколи",
         noServersWidget: "Серверів немає",
-        moreServersFormat: "ще %d..."
+        moreServersFormat: "ще %d...",
+        exportServers: "Експорт серверів",
+        importServers: "Імпорт серверів",
+        importMerge: "Об'єднати",
+        importReplace: "Замінити все",
+        importSuccess: "Імпорт успішний",
+        importFailed: "Помилка імпорту",
+        dataSection: "Дані",
+        importChoiceTitle: "Параметри імпорту",
+        importChoiceMessage: "Об'єднати: додає імпортовані сервери до наявного списку без видалення даних.\nЗамінити всі: видаляє всі поточні сервери та замінює їх імпортованим файлом."
     )
 
     static let hindi = L10nStrings(
@@ -1057,6 +1230,15 @@ extension L10nStrings {
         min30: "30 मिनट",
         never: "कभी नहीं",
         noServersWidget: "कोई सर्वर नहीं",
-        moreServersFormat: "+%d और"
+        moreServersFormat: "+%d और",
+        exportServers: "सर्वर निर्यात करें",
+        importServers: "सर्वर आयात करें",
+        importMerge: "मर्ज करें",
+        importReplace: "सब बदलें",
+        importSuccess: "आयात सफल",
+        importFailed: "आयात विफल",
+        dataSection: "डेटा",
+        importChoiceTitle: "आयात विकल्प",
+        importChoiceMessage: "मर्ज करें: आयातित सर्वर को मौजूदा सूची में जोड़ें, कोई डेटा नहीं हटाया जाएगा।\nसब बदलें: सभी मौजूदा सर्वर हटाएं और आयातित फ़ाइल से बदलें।"
     )
 }
