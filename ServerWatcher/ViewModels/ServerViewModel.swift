@@ -56,9 +56,10 @@ class ServerViewModel: ObservableObject {
     }
 
     func checkServer(_ server: ServerEntry) async {
-        let result = await networkChecker.checkServer(server)
+        let (isOnline, latency) = await networkChecker.checkServer(server)
         if let index = servers.firstIndex(where: { $0.id == server.id }) {
-            servers[index].isOnline = result
+            servers[index].isOnline = isOnline
+            servers[index].latencyMs = latency
             servers[index].lastChecked = Date()
             saveAndNotify()
         }

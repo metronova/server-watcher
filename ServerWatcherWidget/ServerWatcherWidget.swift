@@ -59,7 +59,7 @@ struct ServerWidgetEntryView: View {
         case .systemMedium:
             return 6
         case .systemLarge:
-            return 10
+            return 7
         case .systemExtraLarge:
             return 14
         @unknown default:
@@ -278,10 +278,17 @@ struct ServerWidgetEntryView: View {
                     .lineLimit(1)
             }
             Spacer()
-            Text(statusText(for: server))
-                .font(.caption2)
-                .fontWeight(.medium)
-                .foregroundStyle(statusColor(for: server))
+            VStack(alignment: .trailing, spacing: 1) {
+                Text(statusText(for: server))
+                    .font(.caption2)
+                    .fontWeight(.medium)
+                    .foregroundStyle(statusColor(for: server))
+                if let latency = server.latencyMs {
+                    Text(latencyText(latency))
+                        .font(.caption2)
+                        .foregroundStyle(latencyColor(latency))
+                }
+            }
         }
         .padding(.vertical, 2)
     }
@@ -321,7 +328,11 @@ struct ServerWidgetEntryView: View {
                     .font(.caption)
                     .fontWeight(.semibold)
                     .foregroundStyle(statusColor(for: server))
-                if let lastChecked = server.lastChecked {
+                if let latency = server.latencyMs {
+                    Text(latencyText(latency))
+                        .font(.caption2)
+                        .foregroundStyle(latencyColor(latency))
+                } else if let lastChecked = server.lastChecked {
                     Text(lastChecked, style: .relative)
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
@@ -342,6 +353,22 @@ struct ServerWidgetEntryView: View {
     private func statusText(for server: ServerEntry) -> String {
         guard let isOnline = server.isOnline else { return "—" }
         return isOnline ? entry.strings.online : entry.strings.offline
+    }
+
+    private func latencyText(_ ms: Double) -> String {
+        if ms < 1000 {
+            return String(format: "%.0f ms", ms)
+        } else {
+            return String(format: "%.1f s", ms / 1000)
+        }
+    }
+
+    private func latencyColor(_ ms: Double) -> Color {
+        switch ms {
+        case ..<100:  return .green
+        case ..<500:  return .orange
+        default:      return .red
+        }
     }
 
     private func splitIntoColumns(_ items: [ServerEntry], count: Int) -> [[ServerEntry]] {

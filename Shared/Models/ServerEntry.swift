@@ -22,6 +22,7 @@ struct ServerEntry: Codable, Identifiable, Equatable {
     var checkType: CheckType = .http
     var isOnline: Bool? = nil
     var lastChecked: Date? = nil
+    var latencyMs: Double? = nil
 
     var displayHost: String {
         if let port = port {

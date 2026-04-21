@@ -45,6 +45,12 @@ struct ServerRowView: View {
                     .fontWeight(.medium)
                     .foregroundStyle(statusColor)
 
+                if let latency = server.latencyMs {
+                    Text(latencyText(latency))
+                        .font(.caption2)
+                        .fontWeight(.medium)
+                        .foregroundStyle(latencyColor(latency))
+                }
                 if let lastChecked = server.lastChecked {
                     Text(lastChecked, style: .relative)
                         .font(.caption2)
@@ -67,6 +73,22 @@ struct ServerRowView: View {
             return s.notChecked
         }
         return isOnline ? s.online : s.offline
+    }
+
+    private func latencyText(_ ms: Double) -> String {
+        if ms < 1000 {
+            return String(format: "%.0f ms", ms)
+        } else {
+            return String(format: "%.1f s", ms / 1000)
+        }
+    }
+
+    private func latencyColor(_ ms: Double) -> Color {
+        switch ms {
+        case ..<100:  return .green
+        case ..<500:  return .orange
+        default:      return .red
+        }
     }
 }
 
