@@ -33,7 +33,7 @@ struct AddServerView: View {
                         .textContentType(.URL)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
-                        .keyboardType(.URL)
+                        .keyboardType(.webSearch)
                 }
 
                 Section(s.checkMethod) {

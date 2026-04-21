@@ -38,9 +38,15 @@ struct ServerStatusProvider: TimelineProvider {
             dataManager.saveServers(updatedServers)
 
             let entry = ServerStatusEntry(date: Date(), servers: updatedServers, strings: strings)
-            // Refresh every 15 minutes
-            let nextUpdate = Calendar.current.date(byAdding: .minute, value: 15, to: Date())!
-            let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
+            let interval = AppSettings.shared.refreshInterval
+            let policy: TimelineReloadPolicy
+            if interval == .never || interval.rawValue <= 0 {
+                policy = .never
+            } else {
+                let nextUpdate = Date().addingTimeInterval(TimeInterval(interval.rawValue))
+                policy = .after(nextUpdate)
+            }
+            let timeline = Timeline(entries: [entry], policy: policy)
             completion(timeline)
         }
     }

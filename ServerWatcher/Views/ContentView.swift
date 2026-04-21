@@ -33,14 +33,12 @@ struct ContentView: View {
                                 }
                             }
                             .disabled(viewModel.isChecking)
-                            .padding(.leading, 8)
                         }
                         Button {
                             showingAddServer = true
                         } label: {
                             Image(systemName: "plus")
                         }
-                        .padding(.trailing, 8)
                     }
                 }
                 ToolbarItem(placement: .topBarLeading) {
