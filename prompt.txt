@@ -21,3 +21,10 @@ widget的上下padding可以減少
 
 2x2 (Medium) widget 標題改為 "Server" / "Servers"（根據數量單複數）
 2x4 (Large) widget 最多顯示 6 個伺服器
+
+加入export和import function
+
+import Servers — 選擇 JSON 檔案後，會詢問「合併」或「取代全部」
+有什麼分別？
+
+說明的文字要寫得清楚一點，所有語言都要有
