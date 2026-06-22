@@ -66,9 +66,9 @@ class NetworkChecker {
             let (_, response) = try await URLSession.shared.data(for: request)
             let latency = Date().timeIntervalSince(start) * 1000
             if let httpResponse = response as? HTTPURLResponse {
-                return ((100...599).contains(httpResponse.statusCode), latency)
+                return (httpResponse.statusCode == 200, latency)
             }
-            return (true, latency)
+            return (false, latency)
         } catch {
             return (false, nil)
         }

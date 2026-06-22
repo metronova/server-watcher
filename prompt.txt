@@ -59,3 +59,5 @@ Export & Import — back up your server list as JSON; restore or merge across de
 No account required. No data leaves your device.
 
 +按鈕的左右padding請一樣
+
+http 404要顯示offline, 只有200是online
