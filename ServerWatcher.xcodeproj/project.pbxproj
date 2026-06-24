@@ -443,7 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ServerWatcherWidget/ServerWatcherWidget.entitlements;
-				CURRENT_PROJECT_VERSION = 26.0421.10;
+				CURRENT_PROJECT_VERSION = 26.0622.15;
 				DEVELOPMENT_TEAM = 7T2RAN9M82;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = ServerWatcherWidget/Info.plist;
@@ -454,7 +454,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 26.0421.10;
+				MARKETING_VERSION = 26.0622.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -557,7 +557,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ServerWatcherWidget/ServerWatcherWidget.entitlements;
-				CURRENT_PROJECT_VERSION = 26.0421.10;
+				CURRENT_PROJECT_VERSION = 26.0622.15;
 				DEVELOPMENT_TEAM = 7T2RAN9M82;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = ServerWatcherWidget/Info.plist;
@@ -568,7 +568,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 26.0421.10;
+				MARKETING_VERSION = 26.0622.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serverwatcher.app.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
